@@ -23,7 +23,7 @@ export default {
 
   methods: {
     submit() {
-      fetch("http://aultzckoew.us08.fldrv.com/", {
+      fetch("http://aultzckoew.us08.fldrv.com/sendmail", {
         method: "POST",
 
         headers: {
