@@ -1,5 +1,6 @@
 <template>
-  <form id="form" ref="form" v-on:submit.prevent="submit">
+  <h1 v-if="success">Mail Sent</h1>
+  <form v-else id="form" ref="form" v-on:submit.prevent="submit">
     <input placeholder="Name" v-model="name" type="text" />
     <input placeholder="Email" v-model="email" type="email" />
     <input placeholder="Subject" v-model="subject" type="text" />
@@ -18,6 +19,7 @@ export default {
       email: "",
       subject: "",
       message: "",
+      success: false,
     };
   },
 
@@ -37,6 +39,8 @@ export default {
           message: this.message,
         }),
       });
+
+      this.success = true;
     },
   },
 };
